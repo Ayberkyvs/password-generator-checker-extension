@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: #ECFDF5;
+    --background-50: #D1FAE5;
+    --background-100: #A7F3D0;
+    --background-200: #6EE7B7;
+    --background-300: #34D399;
+    --background-400: #10B981;
+    --background-500: #059669;
+    --background-600: #047857;
+    --background-700: #065F46;
+    --background-800: #064E3B;
+
+    --primary: #10B981;
+    --primary-50: #065F46;
+    --primary-100: #047857;
+    --primary-200: #059669;
+    --primary-300: #10B981;
+    --primary-400: #34D399;
+    --primary-500: #6EE7B7;
+    --primary-600: #A7F3D0;
+    --primary-700: #D1FAE5;
+    --primary-800: #ECFDF5;
+
+    --button: #111827;
+    --text: #2B283A;
+  }
+ 
+  .dark {
+    --background: #111827;
+    --background-50: #1F2937;
+    --background-100: #374151;
+    --background-200: #4B5563;
+    --background-300: #6B7280;
+    --background-400: #9CA3AF;
+    --background-500: #D1D5DB;
+    --background-600: #E5E7EB;
+    --background-700: #F3F4F6;
+    --background-800: #F9FAFB;
+
+    --primary: #4ADF86;
+    --primary-50: #065F46;
+    --primary-100: #047857;
+    --primary-200: #059669;
+    --primary-300: #10B981;
+    --primary-400: #34D399;
+    --primary-500: #6EE7B7;
+    --primary-600: #A7F3D0;
+    --primary-700: #D1FAE5;
+    --primary-800: #ECFDF5;
+
+    --button: #111827;
+    --text: #FFFFFF;
+  }
+}
+body {
+  font-family: 'Inter';
+}
+
+.hero--text {
+  font-family: 'Karla';
+}
