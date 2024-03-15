@@ -17,7 +17,7 @@ const copyToClipboard = () => {
     setTimeout(() => setCopied(false), 2000);
 };
   return (
-    <div className="w-full mt-[35px]">
+    <div className="w-full mt-[25px]">
     <TooltipProvider>
         <Tooltip>
             <TooltipTrigger className="w-full">    

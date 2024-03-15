@@ -11,7 +11,7 @@ import {
 import { generatePass } from "@/lib/utils/password-generator";
 
 export default function Generate({setGeneratedPassword}: {setGeneratedPassword: Function}) {
-  const [value, setValue] = useState(4)
+  const [value, setValue] = useState(16)
 
   const selectItemElements: any = []
 
