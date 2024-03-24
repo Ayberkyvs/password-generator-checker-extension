@@ -19,6 +19,8 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Settings2Icon } from "lucide-react";
+import { useHotkeys } from 'react-hotkeys-hook'
+
 
 
 export default function Generate({setGeneratedPassword}: {setGeneratedPassword: Function}) {
@@ -26,6 +28,7 @@ export default function Generate({setGeneratedPassword}: {setGeneratedPassword: 
   const [settings, setSettings] = useState({lowercase: true, uppercase: true, numbers: true, symbols: true})
 
   const selectItemElements: any = []
+  useHotkeys('space', () => handleClick())
 
   useEffect(()=> {handleClick()}, [])
 
@@ -49,10 +52,11 @@ export default function Generate({setGeneratedPassword}: {setGeneratedPassword: 
     }
     setSettings(updatedSettings);
   };
+
   const borderSettings = "border-[2px] border-black/10 dark:border-[1px] dark:border-white/30"
   return (
     <div className="flex justify-start gap-3">
-        <Button className="bg-primary w-[191px] text-white rounded" onClick={()=> handleClick()}>Generate passwords</Button>
+        <Button className="bg-primary dark:bg-primary-200 w-[191px] text-white rounded" onClick={()=> handleClick()}>Generate passwords</Button>
         <div className="flex gap-2">
           <Select value={`${value}`} onValueChange={handleValueChange}>
           <SelectTrigger className={`w-[50px] bg-background text-text rounded py-0 px-[8px] ${borderSettings}`}>
@@ -78,7 +82,7 @@ export default function Generate({setGeneratedPassword}: {setGeneratedPassword: 
             <DropdownMenuItem>
               <Checkbox className="mr-2" checked={settings.numbers} name="numbers" onClick={()=> handleCheckboxClick("numbers")}/> 0-9
             </DropdownMenuItem>
-            <DropdownMenuItem>
+            <DropdownMenuItem >
               <Checkbox className="mr-2" checked={settings.symbols} name="symbols" onClick={()=> handleCheckboxClick("symbols")}/> Symbols
             </DropdownMenuItem>
           </DropdownMenuContent>

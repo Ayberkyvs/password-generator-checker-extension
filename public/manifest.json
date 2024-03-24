@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "version": "1.0.1",
+    "name": "Password Generator & Checker",
+    "description": "Password generator and checker",
+    "version_name": "1.0.1 Early Access",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "icon.png"
+    },
+    "author": "ayberkyavas9@gmail.com"
+}

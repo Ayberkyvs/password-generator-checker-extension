@@ -6,7 +6,7 @@ import { useState } from 'react'
 export default function PassGenerator({ data }:{data: any}) {
 const [generatedPassword, setGeneratedPassword] = useState("")
   return (
-    <section className='flex flex-col justify-between h-fit'>
+    <section className='flex flex-col justify-between h-fit focus-within:outline-0 ' tabIndex={-1}>
         <div className='flex flex-col mt-[35px] gap-[12px]'>
             <h1 className='hero--text text-[40px] leading-[40px] font-extrabold text-text'>{data.hero} 
             <br /><span className='text-primary w-full'>{data.hero2}</span></h1>

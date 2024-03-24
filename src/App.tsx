@@ -27,22 +27,18 @@ export default function App() {
         url: "https://www.ayberkyavas.com",
         begin: "AY"
       },
-      {
-        name: "Çağatay Ege Yıldırım",
-        url: "",
-        begin: "ÇY"
-      }
     ]
   };  
-  
+
+
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div className='relative w-[550px] h-[550px] bg-background px-[24px] py-[22px]'>
+      <div className='relative w-[550px] h-[550px] bg-background px-[24px] py-[22px] select-none overflow-hidden' tabIndex={-1}>
         <Header title={data.header.title}/>
         <Tabs defaultValue="generator" className="w-full h-fit">
           <TabsList className='w-full mt-3'>
-            <TabsTrigger value="generator" className='w-1/2 dark:data-[state=active]:bg-primary-50'>Generator</TabsTrigger>
-            <TabsTrigger value="checker" className='w-1/2 dark:data-[state=active]:bg-primary-50'>Checker</TabsTrigger>
+            <TabsTrigger value="generator" className='w-1/2 text-text data-[state=active]:bg-primary dark:data-[state=active]:bg-primary-50'>Generator</TabsTrigger>
+            <TabsTrigger value="checker" className='w-1/2 text-text data-[state=active]:bg-primary dark:data-[state=active]:bg-primary-50'>Checker</TabsTrigger>
           </TabsList>
           <TabsContent value="generator">
             <PassGenerator data={data.passGenerator}/>

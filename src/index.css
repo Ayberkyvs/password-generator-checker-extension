@@ -59,6 +59,8 @@
 }
 body {
   font-family: 'Inter';
+  margin: 0px;
+  padding: 0px;
 }
 
 .hero--text {
